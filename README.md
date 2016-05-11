@@ -1,2 +1,2 @@
-# jspsych-GUI
+# jsPsych-GUI
 A GUI for jsPsych
