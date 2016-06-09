@@ -2,6 +2,7 @@ var React = require('react');
 import Toggle from 'material-ui/Toggle';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import classnames from 'classnames';
 
 const items = [
   <MenuItem key={1} value={1} primaryText="Animation" />,
@@ -10,14 +11,7 @@ const items = [
   <MenuItem key={4} value={4} primaryText="Text" />
 ];
 
-const styles = {
-  block: {
-    maxWidth: 200,
-  },
-  toggle: {
-    marginBottom: 16,
-  }
-};
+let toggleClass = classnames('toggle-styles');
 
 var TimelineData = React.createClass({
 	getInitialState: function() {
@@ -29,11 +23,11 @@ var TimelineData = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<div style={styles.block}>
+				<div className={toggleClass.block}>
 					<Toggle
 				      label="Timeline / Trial"
 				      defaultToggled={true}
-				      style={styles.toggle}
+				      className={toggleClass.toggle}
 				    />
 				</div>
 				<div>

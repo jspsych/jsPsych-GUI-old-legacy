@@ -7,6 +7,7 @@ import Subheader from 'material-ui/Subheader';
 import Paper from 'material-ui/Paper';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import classnames from 'classnames';
 
 let SelectableList = MakeSelectable(List);
 
@@ -44,22 +45,11 @@ function wrapState(ComposedComponent) {
 
 SelectableList = wrapState(SelectableList);
 
-const stylePaper = {
-  width: 350,
-  height: 475,
-  margin: 20,
-  display: 'inline-block',
-};
-
-const styleFAB = {
-  marginRight: 20,
-  position: 'absolute',
-  bottom: 70,
-  left: 100
-};
+var stylePaperClass = classnames('stylePaper');
+var styleFABClass = classnames('styleFAB');
 
 const TimelineStructure = () => (
-<Paper style={stylePaper} zDepth={1}>
+<Paper className={stylePaperClass} zDepth={1}>
     <SelectableList defaultValue={3}>
       <Subheader>Experiment Timeline</Subheader>
       <ListItem
@@ -91,7 +81,7 @@ const TimelineStructure = () => (
       />
     </SelectableList>
     <div>
-		<FloatingActionButton style={styleFAB}>
+		<FloatingActionButton className={styleFABClass}>
 	      <ContentAdd />
 	    </FloatingActionButton>
 	</div>

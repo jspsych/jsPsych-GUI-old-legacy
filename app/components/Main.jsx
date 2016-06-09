@@ -8,7 +8,7 @@ var Main = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<div style={{height: '80px', position: 'relative'}}>
+				<div>
 					<MainNavBar/>
 				</div>
 				<Grid>

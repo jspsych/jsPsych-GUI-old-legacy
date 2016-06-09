@@ -1,8 +1,22 @@
-@import "base/variables";
+.stylePaper {
+  width: 350;
+  height: 475;
+  margin: 20;
+  display: 'inline-block';
+}
 
-// foundation
-@import "base/foundation-settings";
-@import "foundation";
-@include foundation-everything;
+.styleFAB {
+  marginRight: 20;
+  position: 'absolute';
+  bottom: 70;
+  left: 100;
+}
 
-// Components
+.toggle-styles {
+  block: {
+    maxWidth: 200;
+  };
+  toggle: {
+    marginBottom: 16;
+  };
+};
