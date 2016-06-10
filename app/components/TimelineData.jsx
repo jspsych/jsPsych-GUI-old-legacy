@@ -23,11 +23,11 @@ var TimelineData = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<div className={toggleClass.block}>
+				<div style={toggleClass.block}>
 					<Toggle
 				      label="Timeline / Trial"
 				      defaultToggled={true}
-				      className={toggleClass.toggle}
+				      style={toggleClass.toggle}
 				    />
 				</div>
 				<div>
