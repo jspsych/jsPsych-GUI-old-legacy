@@ -3,7 +3,7 @@ var jsPsych_Path = __dirname + '/jspsych-latest/jspsych.js';
 var fs = require('fs');
 // Create our app
 var app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(function (req, res, next){
   if (req.headers['x-forwarded-proto'] === 'https') {
@@ -16,7 +16,7 @@ app.use(function (req, res, next){
 app.use(express.static('public'));
 
 var all_plugin_parameters = [];
-var all_plugin_parameters_index = 0;			
+var all_plugin_parameters_index = 0;
 addPluginParameters = (obj) => {
 	all_plugin_parameters[all_plugin_parameters_index] = obj;
 	all_plugin_parameters_index += 1;
