@@ -13,48 +13,40 @@ jsPsych.plugins["single-audio"] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "single-audio",
+    "info" : {
+      "name" : "single-audio",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-    
         {
-         "name" : "stimulus",
-           "type" : ["array"],
-           "label": "stimulus"
-          },
-        
-        
+          "name" : "stimulus",
+          "type" : ["array"],
+          "label": "stimulus"
+        },
         {
-         "name" : "choices", 
-           "type": ["array"],
-           "label": "choices", 
-           "default": "[]"
-
-          },
-        
+          "name" : "choices", 
+          "type": ["array"],
+          "label": "choices", 
+          "default": "[]"
+        },
         {
-         "name" : "prompt", 
-           "type": ["string"],
-           "label": "prompt", 
-           "default": "\"\""
-
-          },
-        
-          {
-           "name" : "timing_response", 
-           "type": ["number"],
-           "label": "timing_response", 
-           "default": "-1"
-
-          },
-        
-          {
-           "name" : "response_ends_trial", 
-           "type": ["boolean"],
-           "label": "response_ends_trial", 
-           "default": "true"
-
-          }
-        
+          "name" : "prompt", 
+          "type": ["string"],
+          "label": "prompt", 
+          "default": "\"\""
+        },
+        {
+          "name" : "timing_response", 
+          "type": ["number"],
+          "label": "timing_response", 
+          "default": "-1"
+        },
+        {
+          "name" : "response_ends_trial", 
+          "type": ["boolean"],
+          "label": "response_ends_trial", 
+          "default": "true"
+        }
     ]
   };
 

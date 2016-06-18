@@ -14,43 +14,38 @@ jsPsych.plugins['survey-multi-choice'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "survey-multi-choice",
+    "info" : {
+      "name" : "survey-multi-choice",
+      "description" : "This is a jspsych plugin file."
+    },
      "parameters" : [
-           
-          {
-           "name" : "questions",
-           "type" : ["array"],
-           "label": "questions"
-          },
-           
-          {
-           "name" : "options",
-           "type" : ["array"],
-           "label": "options"
-          },
-        
-          {
-           "name" : "required", 
-           "type": ["array"],
-           "label": "required"
-
-          },
-        
-          {
-           "name" : "horizontal", 
-           "type": ["boolean"],
-           "label": "horizontal", 
-           "default": "false"
-
-          },
-        
-          {
-           "name" : "preamble", 
-           "type": ["array"],
-           "label": "preamble", 
-           "default": "empty string"
-
-          }
+        {
+         "name" : "questions",
+         "type" : ["array"],
+         "label": "questions"
+        },
+        {
+         "name" : "options",
+         "type" : ["array"],
+         "label": "options"
+        },
+        {
+         "name" : "required", 
+         "type": ["array"],
+         "label": "required"
+        },
+        {
+         "name" : "horizontal", 
+         "type": ["boolean"],
+         "label": "horizontal", 
+         "default": "false"
+        },
+        {
+         "name" : "preamble", 
+         "type": ["array"],
+         "label": "preamble", 
+         "default": "empty string"
+        }
      ]
   };
 

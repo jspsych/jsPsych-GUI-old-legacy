@@ -13,47 +13,45 @@ jsPsych.plugins["button-response"] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "button-response",
+    "info" : {
+      "name" : "button-response",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
       {
-          "name" : "stimuli",
+        "name" : "stimuli",
         "type" : ["array","function"],
         "label": "Stimulus"
       },
       {
-          "name" : "frame_time", 
+        "name" : "frame_time", 
         "type": ["number","function"],
         "label": "Frame Time", 
         "default": 250
-
       },
       {
-          "name" : "frame_isi", 
+        "name" : "frame_isi", 
         "type": ["number","function"],
         "label": "Frame ISI", 
         "default": 0
-
       },
       {
-          "name" : "sequence_reps", 
+        "name" : "sequence_reps", 
         "type": ["number","function"],
         "label": "Sequence Repetition", 
         "default": 1
-
       },
       {
-          "name" : "choices", 
+        "name" : "choices", 
         "type": ["array","function"],
         "label": "Choices", 
         "default": []
-
       },
       {
-          "name" : "prompt", 
+        "name" : "prompt", 
         "type": ["string","number","function"],
         "label": "Prompt", 
         "default": " "
-
       }
     ]
   };

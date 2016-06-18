@@ -14,39 +14,46 @@ jsPsych.plugins.instructions = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name":"instructions",
+    "info" : {
+      "name":"instructions",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-      {   "name": "pages",
-          "type" : ["array"],
-          "label": "pages"
-        },
-      {   "name": "key_forward",
-          "type": ["key code"],
-          "label": "key_forward", 
-          "default" : "rightarrow"
-        },
-      {     "name": "key_backward", 
-          "type": ["key code"],
-          "label": "key_backward", 
-          "default" : "leftarrow"
-
-        },
-      {   "name": "allow_backward", 
-          "type": ["boolean"],
-          "label": "allow_backward", 
-          "default": true
-
-        },
-      {   "name": "allow_keys", 
-          "type": ["boolean"],
-          "label": "allow_keys", 
-          "default": true
-        },
-      {     "name" : "show_clickable_nav",
-          "type": ["boolean"],
-          "label": "show_clickable_nav", 
-          "default": false
-        }
+      {   
+        "name": "pages",
+        "type" : ["array"],
+        "label": "pages"
+      },
+      {
+        "name": "key_forward",
+        "type": ["key code"],
+        "label": "key_forward", 
+        "default" : "rightarrow"
+      },
+      {
+        "name": "key_backward", 
+        "type": ["key code"],
+        "label": "key_backward", 
+        "default" : "leftarrow"
+      },
+      {   
+        "name": "allow_backward", 
+        "type": ["boolean"],
+        "label": "allow_backward", 
+        "default": true
+      },
+      {
+        "name": "allow_keys", 
+        "type": ["boolean"],
+        "label": "allow_keys", 
+        "default": true
+      },
+      {     
+        "name" : "show_clickable_nav",
+        "type": ["boolean"],
+        "label": "show_clickable_nav", 
+        "default": false
+      }
     ]
   };
 

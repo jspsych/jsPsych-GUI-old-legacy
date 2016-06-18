@@ -13,7 +13,10 @@ jsPsych.plugins.xab = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "xab",
+    "info" : {
+      "name" : "xab",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
         {
          "name" : "stimuli",

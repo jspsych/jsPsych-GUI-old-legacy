@@ -15,45 +15,40 @@ jsPsych.plugins['reconstruction'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "reconstruction",
+    "info" : {
+      "name" : "reconstruction",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-          {
-           "name" : "stim_function",  
-           "type" : ["function"],
-           "label": "stim_function"
-          },
-        
-          {
-           "name" :"starting_value", 
-           "type": ["number"],
-           "label": "starting_value", 
-           "default": "0.5"
-
-          },
-        
-          {
-           "name" : "step_size", 
-           "type": ["number"],
-           "label": "step_size", 
-           "default": "0.05"
-
-          },
-        
-          {
-           "name" : "key_increase", 
-           "type": ["key code"],
-           "label": "key_increase", 
-           "default": "h"
-
-          },
-        
-          {
-           "name" : "key_decrease", 
-           "type": ["key code"],
-           "label": "key_decrease", 
-           "default": "g"
-
-          }
+      {
+       "name" : "stim_function",  
+       "type" : ["function"],
+       "label": "stim_function"
+      },
+      {
+       "name" :"starting_value", 
+       "type": ["number"],
+       "label": "starting_value", 
+       "default": "0.5"
+      },
+      {
+       "name" : "step_size", 
+       "type": ["number"],
+       "label": "step_size", 
+       "default": "0.05"
+      },
+      {
+       "name" : "key_increase", 
+       "type": ["key code"],
+       "label": "key_increase", 
+       "default": "h"
+      },
+      {
+       "name" : "key_decrease", 
+       "type": ["key code"],
+       "label": "key_decrease", 
+       "default": "g"
+      }
     ]
   };
 

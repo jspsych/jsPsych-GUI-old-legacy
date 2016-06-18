@@ -29,6 +29,9 @@ app.get('/plugin_data', function(req,res) {
 
 	var plugins_path = __dirname + "/jspsych-latest/plugins/";
 
+	all_plugin_parameters = [];
+  	all_plugin_parameters_index = 0;
+
 	fs.readdir(plugins_path, function(err, items) {
 		if(err) {
 			throw err;
@@ -38,7 +41,6 @@ app.get('/plugin_data', function(req,res) {
 			var file_type_index = items[i].indexOf(".");
 	        var file_type = items[i].substring(file_type_index+1);
 	        if(file_type == "js") {
-	        	console.log(items[i])
 	        	var file_name_start = items[i].indexOf("-") + 1;
 	        	var file_name_end = items[i].indexOf(".");
 	        	var file_name = items[i].substring(file_name_start,file_name_end);

@@ -16,7 +16,10 @@ jsPsych.plugins['vsl-grid-scene'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "vsl-grid-scene",
+    "info" : {
+      "name" : "vsl-grid-scene",
+      "description" : "This is a jspsych plugin file."
+    },
      "parameters" : [
         {
          "name" : "stimuli",
@@ -28,14 +31,12 @@ jsPsych.plugins['vsl-grid-scene'] = (function() {
          "type": ["array"],
          "label": "image_size", 
          "default": "[100,100]"
-
         },
-      {
-       "name" : "timing_duration", 
+        {
+         "name" : "timing_duration", 
          "type": ["number"],
          "label": "timing_duration", 
          "default": "[2000]"
-
         }
      ]
   };

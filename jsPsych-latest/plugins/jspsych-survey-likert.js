@@ -13,21 +13,21 @@ jsPsych.plugins['survey-likert'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "survey-likert",
+    "info" : {
+      "name" : "survey-likert",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-     
-        {
-         "name" : "questions",
-         "type" : ["array"],
-         "label": "questions"
-        },
-         
-        {
-         "name" : "labels",
-         "type" : ["array"],
-         "label": "labels"
-        }
-      
+      {
+       "name" : "questions",
+       "type" : ["array"],
+       "label": "questions"
+      },
+      {
+       "name" : "labels",
+       "type" : ["array"],
+       "label": "labels"
+      }
     ]
   };
 

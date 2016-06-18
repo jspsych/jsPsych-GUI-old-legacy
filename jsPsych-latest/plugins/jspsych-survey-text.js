@@ -14,39 +14,34 @@ jsPsych.plugins['survey-text'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "survey-text",
+    "info" : {
+      "name" : "survey-text",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-         
         {
          "name" : "questions",
          "type" : ["array"],
          "label": "questions"
         },
-      
         {
          "name" : "preamble", 
          "type": ["string"],
          "label": "preamble", 
          "default": "empty string"
-
         },
-      
         {
          "name" : "rows", 
          "type": ["array"],
          "label": "rows", 
          "default": "[1]"
-
         },
-      
         {
          "name" : "columns", 
          "type": ["array"],
          "label": "columns", 
          "default": "[40]"
-
         }
-      
      ]
   };
 

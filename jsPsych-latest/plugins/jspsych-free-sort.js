@@ -12,54 +12,53 @@ jsPsych.plugins['free-sort'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "free-sort",
+    "info" : {
+      "name" : "free-sort",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-        {
-            "name" : "stimuli",
-          "type" : ["array"],
-          "label": "Stimuli"
-        },
-        {
-            "name" : "stim_height", 
-          "type": ["number"],
-          "label": "Stim Height", 
-          "default" : 100
-        },
-        {
-            "name" : "stim_width", 
-          "type": ["number"],
-          "label": "Stim Width", 
-          "default" : 100
-
-        },
-        {
-            "name" : "sort_area_height", 
-          "type": ["number"],
-          "label": "Sort Area Height", 
-          "default": 800
-
-        },
-        {
-            "name" : "sort_area_width", 
-          "type": ["number"],
-          "label": "Sort Area Width", 
-          "default": 800
-
-        },
-        {
-            "name" : "prompt", 
-          "type": ["string"],
-          "label": "Prompt", 
-          "default": " "
-
-        },
-        {
-            "name" : "prompt_location", 
-          "type": ["string"],
-          "label": "Prompt Location",
-          "default": "above"
-        }
-      ]
+      {
+        "name" : "stimuli",
+        "type" : ["array"],
+        "label": "Stimuli"
+      },
+      {
+        "name" : "stim_height", 
+        "type": ["number"],
+        "label": "Stim Height", 
+        "default" : 100
+      },
+      {
+        "name" : "stim_width", 
+        "type": ["number"],
+        "label": "Stim Width", 
+        "default" : 100
+      },
+      {
+        "name" : "sort_area_height", 
+        "type": ["number"],
+        "label": "Sort Area Height", 
+        "default": 800
+      },
+      {
+        "name" : "sort_area_width", 
+        "type": ["number"],
+        "label": "Sort Area Width", 
+        "default": 800
+      },
+      {
+        "name" : "prompt", 
+        "type": ["string"],
+        "label": "Prompt", 
+        "default": " "
+      },
+      {
+        "name" : "prompt_location", 
+        "type": ["string"],
+        "label": "Prompt Location",
+        "default": "above"
+      }
+    ]
   };
 
   jsPsych.pluginAPI.registerPreload('free-sort', 'stimuli', 'image');

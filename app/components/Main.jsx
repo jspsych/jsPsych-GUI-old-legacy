@@ -2,28 +2,31 @@ var React = require('react');
 import MainNavBar from 'MainNavBar';
 import TimelineStructure from 'TimelineStructure';
 import TimelineData from 'TimelineData';
-const {Grid, Row, Col} = require('react-flexbox-grid');
+const {Grid, Row, Cell} = require('react-inline-grid');
+var {setPluginDetails} = require('actions');
+var {connect} = require('react-redux');
+var actions = require('actions');
 
 var Main = React.createClass({
 	componentWillMount: function() {
-		$.get('/plugin_data',function(all_plugin_parameters){
-	      console.log("Getting Plugin Data...",all_plugin_parameters);
-	    }.bind(this));
+		var {dispatch} = this.props;
+		$.get('/plugin_data',(all_plugin_parameters) => {
+	      	console.log("Received Plugin Parameters...",all_plugin_parameters);
+	      	dispatch(actions.setPluginDetails(all_plugin_parameters));
+	    });
 	},
 	render: function() {
 		return (
 			<div>
-				<div>
-					<MainNavBar/>
-				</div>
+				<MainNavBar/>
 				<Grid>
 				  <Row>
-					<Col md={4}>
+					<Cell is="3">
 						<TimelineStructure/>
-					</Col>
-					<Col md={8}>
+					</Cell>
+					<Cell is="9">
 						<TimelineData/>
-					</Col>	
+					</Cell>	
 				  </Row>
 				</Grid>
 			</div>
@@ -31,4 +34,4 @@ var Main = React.createClass({
 	}
 });
 
-module.exports = Main;
+module.exports = connect()(Main);

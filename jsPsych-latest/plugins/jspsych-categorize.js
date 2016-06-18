@@ -11,7 +11,10 @@ jsPsych.plugins.categorize = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "categorize",
+    "info" : {
+      "name" : "categorize",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
       {
         "name" : "stimulus",
@@ -23,96 +26,84 @@ jsPsych.plugins.categorize = (function() {
         "type": ["boolean"],
         "label": "Is HTML",  
         "default": false
-
       },
       {
-          "name" : "key_answer", 
+        "name" : "key_answer", 
         "type": ["array"],
         "label": "Key Answer"
       },
       {
-          "name" : "choices", 
+        "name" : "choices", 
         "type": ["array"],
         "label": "Choices"
       },
       {
-          "name" : "text_answer", 
+        "name" : "text_answer", 
         "type": ["array"],
         "label": "Text Answer", 
         "default": " "
-
       },
       {
-          "name" : "correct_text", 
+        "name" : "correct_text", 
         "type": ["string"],
         "label": "Correct Text", 
         "default": "Correct."
-
       },
       {
-          "name" : "incorrect_text", 
+        "name" : "incorrect_text", 
         "type": ["string"],
         "label": "Incorrect Text", 
         "default": "Wrong."
-
       },
       {
-          "name" : "prompt", 
+        "name" : "prompt", 
         "type": ["string"],
         "label": "Prompt", 
         "default": " "
-
       },
       {
-          "name"  : "force_correct_button_press", 
+        "name"  : "force_correct_button_press", 
         "type": ["boolean"],
         "label": "Force Correct Button Press", 
         "default": false
-
       },
       {
-          "name"  : "show_stim_with_feedback", 
+        "name"  : "show_stim_with_feedback", 
         "type": ["boolean"],
         "label": "Show Stim with Feedback", 
         "default": true
-
       },
       {
-          "name" : "show_feedback_on_timeout", 
+        "name" : "show_feedback_on_timeout", 
         "type": ["string"],
         "label": "Show Feedback on Timeout", 
         "default": false
-
       },
       {
-          "name" : "timeout_message", 
+        "name" : "timeout_message", 
         "type": ["string"],
         "label": "Timeout Message", 
         "default": "Please respond faster."
-
       },
       {
-          "name"  :"timing_stim", 
+        "name"  :"timing_stim", 
         "type": ["number"],
         "label": "Timing Stim", 
         "default": -1
-
       },
       {
-          "name" : "timing_feedback_duration", 
+        "name" : "timing_feedback_duration", 
         "type": ["number"],
         "label": "Timing Feedback Duration", 
         "default": 2000
-
       },
       {
-          "name"  : "timing_response", 
+        "name"  : "timing_response", 
         "type": ["number"],
         "label": "Timing Response", 
         "default": -1
-
       }
-     ]
+    ]
   };
 
   jsPsych.pluginAPI.registerPreload('categorize', 'stimulus', 'image');

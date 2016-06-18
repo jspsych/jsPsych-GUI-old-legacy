@@ -19,96 +19,78 @@ jsPsych.plugins["visual-search-circle"] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "visual-search-circle",
+    "info" : {
+      "name" : "visual-search-circle",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-     
-        {
-         "name" : "target_present",
-         "type" : ["boolean"],
-         "label": "target_present"
-        },
-      
-        {
-         "name" : "set_size", 
-         "type": ["number"],
-         "label": "set_size"
-
-        },
-      
-        {
-         "name" : "target", 
-         "type": ["string"],
-         "label": "target"
-
-        },
-      
-        {
-         "name" : "foil", 
-         "type": ["string"],
-         "label": "foil"
-        },
-      
-        {
-         "name" : "fixation_image", 
-         "type": ["string"],
-         "label": "fixation_image"
-        },
-      
-        {
-         "name" : "target_size", 
-         "type": ["array"],
-         "label": "target_size", 
-         "default": "[50,50]"
-
-        },
-      
-        {
-         "name" : "fixation_size", 
-         "type": ["array"],
-         "label": "fixation_size", 
-         "default": "[16,16]"
-
-        },
-      
-        {
-         "name" : "circle_diameter", 
-         "type": ["number"],
-         "label": "circle_diameter", 
-         "default": "250"
-
-        },
-      
-        {
-         "name" : "target_present_key", 
-         "type": ["number"],
-         "label": "target_present_key", 
-         "default": "74"
-
-        },
-      
-        {
-         "name" : "target_absent_key", 
-         "type": ["number"],
-         "label": "target_absent_key", 
-         "default": "70"
-
-        },
-      
-        {
-         "name" : "timing_max_search", 
-         "type": ["number"],
-         "label": "timing_max_search", 
-         "default": "-1"
-
-        },
-      
-        {
-         "name" : "timing_fixation", 
-         "type": ["number"],
-         "label": "timing_fixation", 
-         "default": "1000"
-
-        }
+      {
+       "name" : "target_present",
+       "type" : ["boolean"],
+       "label": "target_present"
+      },
+      {
+       "name" : "set_size", 
+       "type": ["number"],
+       "label": "set_size"
+      },
+      {
+       "name" : "target", 
+       "type": ["string"],
+       "label": "target"
+      },
+      {
+       "name" : "foil", 
+       "type": ["string"],
+       "label": "foil"
+      },
+      {
+       "name" : "fixation_image", 
+       "type": ["string"],
+       "label": "fixation_image"
+      },
+      {
+       "name" : "target_size", 
+       "type": ["array"],
+       "label": "target_size", 
+       "default": "[50,50]"
+      },
+      {
+       "name" : "fixation_size", 
+       "type": ["array"],
+       "label": "fixation_size", 
+       "default": "[16,16]"
+      },
+      {
+       "name" : "circle_diameter", 
+       "type": ["number"],
+       "label": "circle_diameter", 
+       "default": "250"
+      },
+      {
+       "name" : "target_present_key", 
+       "type": ["number"],
+       "label": "target_present_key", 
+       "default": "74"
+      },
+      {
+       "name" : "target_absent_key", 
+       "type": ["number"],
+       "label": "target_absent_key", 
+       "default": "70"
+      },
+      {
+       "name" : "timing_max_search", 
+       "type": ["number"],
+       "label": "timing_max_search", 
+       "default": "-1"
+      },
+      {
+       "name" : "timing_fixation", 
+       "type": ["number"],
+       "label": "timing_fixation", 
+       "default": "1000"
+      }
     ]
   };
 

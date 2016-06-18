@@ -14,17 +14,21 @@ jsPsych.plugins.text = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "text",
+    "info" : {
+      "name" : "text",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-      {   "name" : "text",
+      {   
+        "name" : "text",
         "type" : ["string","function"],
         "label": "text"
       },
-      {   "name" : "cont_key", 
+      {   
+        "name" : "cont_key", 
         "type": ["string","number","function"],
         "label": "cont_key",
         "default": "space"
-
       }
     ]
   };

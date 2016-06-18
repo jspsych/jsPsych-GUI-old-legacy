@@ -16,71 +16,60 @@ jsPsych.plugins['vsl-animate-occlusion'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "vsl-animate-occlusion",
+    "info" : {
+      "name" : "vsl-animate-occlusion",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-     
-        {
-         "name" : "stimuli",
-         "type" : ["array"],
-         "label": "stimuli"
-        },
-      
-        {
-         "name" : "canvas_size", 
-         "type": ["array"],
-         "label": "canvas_size", 
-         "default": "[400,400]"
+      {
+       "name" : "stimuli",
+       "type" : ["array"],
+       "label": "stimuli"
+      },
+    
+      {
+       "name" : "canvas_size", 
+       "type": ["array"],
+       "label": "canvas_size", 
+       "default": "[400,400]"
 
-        },
-      
+      },
       {
        "name" : "image_size", 
-         "type": ["array"],
-         "label": "image_size", 
-         "default": "[100,100]"
-
-        },
-      
+       "type": ["array"],
+       "label": "image_size", 
+       "default": "[100,100]"
+      },
       {
        "name" : "initial_direction", 
-         "type": ["string"],
-         "label": "initial_direction", 
-         "default": "\"left\""
-
-        },
-      
+       "type": ["string"],
+       "label": "initial_direction", 
+       "default": "\"left\""
+      },
       {
        "name" : "occlude_center", 
-         "type": ["boolean"],
-         "label": "occlude_center", 
-         "default": "true"
-
-        },
-      
+       "type": ["boolean"],
+       "label": "occlude_center", 
+       "default": "true"
+      },
       {
        "name" : "choices", 
-         "type": ["array"],
-         "label": "choices", 
-         "default": "\"\""
-
-        },
-      
+       "type": ["array"],
+       "label": "choices", 
+       "default": "\"\""
+      },
       {
        "name" : "timing_cycle", 
-         "type": ["number"],
-         "label": "timing_cycle", 
-         "default": "1000"
-
-        },
-      
+       "type": ["number"],
+       "label": "timing_cycle", 
+       "default": "1000"
+      },
       {
        "name" : "timing_pre_movement", 
-         "type": ["number"],
-         "label": "timing_pre_movement", 
-         "default": "500"
-
-        }
-      
+       "type": ["number"],
+       "label": "timing_pre_movement", 
+       "default": "500"
+      }
     ]
   };
 

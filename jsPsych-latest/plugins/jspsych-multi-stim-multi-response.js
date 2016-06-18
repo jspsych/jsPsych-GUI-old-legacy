@@ -15,50 +15,53 @@ jsPsych.plugins["multi-stim-multi-response"] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "multi-stim-multi-response",
+    "info" : {
+      "name" : "multi-stim-multi-response",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-        {
-            "name" : "stimuli",
-          "type" : ["array"],
-          "label": "Stimuli"
-        },
-        {
-            "name" : "is_html", 
-          "type": ["boolean"],
-          "label": "Is HTML", 
-          "default" : false
-        },
-        {
-            "name" : "choices", 
-          "type": ["array"],
-          "label": "Choices"
-        },
-        {
-            "name" : "prompt", 
-          "type": ["string"],
-          "label": "Prompt", 
-          "default": " "
+      {
+        "name" : "stimuli",
+        "type" : ["array"],
+        "label": "Stimuli"
+      },
+      {
+        "name" : "is_html", 
+        "type": ["boolean"],
+        "label": "Is HTML", 
+        "default" : false
+      },
+      {
+        "name" : "choices", 
+        "type": ["array"],
+        "label": "Choices"
+      },
+      {
+        "name" : "prompt", 
+        "type": ["string"],
+        "label": "Prompt", 
+        "default": " "
 
-        },
-        {
-            "name" : "timing_stim", 
-          "type": ["array"],
-          "label": "Timing Stim", 
-          "default": [1000,1000,1000]
-        },
-        {
-            "name" : "timing_response", 
-          "type": ["number"],
-          "label": "Timing Response", 
-          "default": -1
-        },
-        {
-            "name" : "response_ends_trial", 
-          "type": ["boolean"],
-          "label": "Response Ends Trials", 
-          "default": true
-        }
-     ]
+      },
+      {
+        "name" : "timing_stim", 
+        "type": ["array"],
+        "label": "Timing Stim", 
+        "default": [1000,1000,1000]
+      },
+      {
+        "name" : "timing_response", 
+        "type": ["number"],
+        "label": "Timing Response", 
+        "default": -1
+      },
+      {
+        "name" : "response_ends_trial", 
+        "type": ["boolean"],
+        "label": "Response Ends Trials", 
+        "default": true
+      }
+    ]
   };
 
   jsPsych.pluginAPI.registerPreload('multi-stim-multi-response', 'stimuli', 'image');

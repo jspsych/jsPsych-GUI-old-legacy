@@ -21,46 +21,49 @@ jsPsych.plugins.palmer = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "palmer",
+    "info" : {
+      "name" : "palmer",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
         {
-            "name" : "configuration",
+          "name" : "configuration",
           "type" : ["array"],
           "label": "Configuration"
         },
         {
-            "name" : "show_feedback", 
+          "name" : "show_feedback", 
           "type": ["boolean"],
           "label": "Show Feedback", 
           "default" : false
         },
         {
-            "name" : "grid_spacing", 
+          "name" : "grid_spacing", 
           "type": ["number"],
           "label": "Grid Spacing",
           "default": 75
         },
         {
-            "name" : "circle_radius", 
+          "name" : "circle_radius", 
           "type": ["number"],
           "label": "Circle Radius", 
           "default": 20
 
         },
         {
-            "name" : "square_size", 
+          "name" : "square_size", 
           "type": ["number"],
           "label": "Square Size", 
           "default": 3
         },
         {
-            "name" : "timing_feedback", 
+          "name" : "timing_feedback", 
           "type": ["number"],
           "label": "Timing Response", 
           "default": 1000
         },
         {
-            "name" : "prompt", 
+          "name" : "prompt", 
           "type": ["string"],
           "label": "Response Ends Trials", 
           "default": " "

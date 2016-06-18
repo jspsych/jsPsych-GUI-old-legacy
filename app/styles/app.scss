@@ -12,11 +12,10 @@
   left: 100;
 }
 
-.toggle-styles {
-  block: {
-    maxWidth: 200;
-  };
-  toggle: {
-    marginBottom: 16;
-  };
+.toggle-styles-block {
+   maxWidth: 200;
+};
+
+.toggle-styles-toggle {
+  marginBottom: 16;
 };

@@ -1,6 +1,5 @@
 var React = require('react');
 import {Component, PropTypes} from 'react';
-// import MobileTearSheet from '../../../MobileTearSheet';
 import {List, ListItem, MakeSelectable} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Subheader from 'material-ui/Subheader';
@@ -49,7 +48,7 @@ var stylePaperClass = classnames('stylePaper');
 var styleFABClass = classnames('styleFAB');
 
 const TimelineStructure = () => (
-<Paper className={stylePaperClass} zDepth={1}>
+<Paper className="stylePaper" zDepth={1}>
     <SelectableList defaultValue={3}>
       <Subheader>Experiment Timeline</Subheader>
       <ListItem
@@ -81,60 +80,11 @@ const TimelineStructure = () => (
       />
     </SelectableList>
     <div>
-		<FloatingActionButton className={styleFABClass}>
+		<FloatingActionButton className="styleFAB">
 	      <ContentAdd />
 	    </FloatingActionButton>
 	</div>
 </Paper>
 );
-
-// export default ListExampleSelectable;
-
-// import {List, ListItem, ListItemContent, ListItemAction, Checkbox} from 'react-mdl';
-// import {Grid, Cell} from 'react-mdl';
-// import {FABButton, Icon} from 'react-mdl';
-
-// var TimelineStructure = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<div>
-// 				<List>
-// 					<ListItem>
-// 					    <ListItemContent avatar="person">Trial 1</ListItemContent>
-// 					    <ListItemAction>
-// 					      <Checkbox defaultChecked />
-// 					    </ListItemAction>
-// 					</ListItem>
-// 					<ListItem>
-// 					    <ListItemContent avatar="person">Trial 2</ListItemContent>
-// 					    <ListItemAction>
-// 					      <Checkbox defaultChecked />
-// 					    </ListItemAction>
-// 					</ListItem>
-// 					<ListItem>
-// 					    <ListItemContent avatar="person">Trial 3</ListItemContent>
-// 					    <ListItemAction>
-// 					      <Checkbox defaultChecked />
-// 					    </ListItemAction>
-// 					</ListItem>
-// 				</List>
-// 				<div>
-// 					<Grid>
-// 						<Cell col={6} style={{position: 'absolute', bottom: '0', left: '100px'}}>
-// 							<FABButton colored ripple>
-// 				    			<Icon name="add" />
-// 							</FABButton>
-// 						</Cell>
-// 						<Cell col={6} style={{position: 'absolute', bottom: '0', left:'300px'}}>
-// 							<FABButton colored ripple>
-// 				    			<Icon name="delete" />
-// 							</FABButton>
-// 						</Cell>
-// 					</Grid>
-// 				</div>
-// 			</div>
-// 		);
-// 	}
-// });
 
 module.exports = TimelineStructure;

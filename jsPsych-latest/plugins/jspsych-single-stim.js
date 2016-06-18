@@ -14,54 +14,52 @@ jsPsych.plugins["single-stim"] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" :"single-stim",
+    "info" : {
+      "name" :"single-stim",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-      {"name": "stimulus",
-         "type" : ["array"],
-         "label": "stimulus"
-        },
-      
-      {"name": "is_html", 
-         "type": ["boolean"],
-         "label": "is_html", 
-         "default": "false"             
-
-        },
-      
-      {"name" : "choices", 
-         "type": ["array"],
-         "label": "choices", 
-         "default": "[]"
-
-        },
-      
-      {"name" : "prompt", 
-         "type": ["string"],
-         "label": "prompt", 
-         "default": "\"\""
-
-        },
-      
-      {"name" : "timing_stim", 
-         "type": ["number"],
-         "label": "timing_stim", 
-         "default": "-1"
-
-        },
-      
-        {"name" : "timing_response", 
-         "type": ["number"],
-         "label": "timing_response", 
-         "default": "-1"
-
-        },
-      
-        {"name" : "response_ends_trial",
-         "type": ["boolean"],
-         "label": "response_ends_trial", 
-         "default": "true"
-
-        }
+      {
+        "name": "stimulus",
+        "type" : ["array"],
+        "label": "stimulus"
+      },
+      {
+        "name": "is_html", 
+        "type": ["boolean"],
+        "label": "is_html", 
+        "default": "false"             
+      },
+      {
+        "name" : "choices", 
+        "type": ["array"],
+        "label": "choices", 
+        "default": "[]"
+      },   
+      {
+        "name" : "prompt", 
+        "type": ["string"],
+        "label": "prompt", 
+        "default": "\"\""
+      },
+      {
+        "name" : "timing_stim", 
+        "type": ["number"],
+        "label": "timing_stim", 
+        "default": "-1"
+      },
+      {
+        "name" : "timing_response", 
+        "type": ["number"],
+        "label": "timing_response", 
+        "default": "-1"
+      },
+      {
+        "name" : "response_ends_trial",
+        "type": ["boolean"],
+        "label": "response_ends_trial", 
+        "default": "true"
+      }
     ]
   };
 

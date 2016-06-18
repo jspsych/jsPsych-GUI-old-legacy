@@ -11,40 +11,41 @@ jsPsych.plugins.html = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "html",
+    "info" : {
+      "name" : "html",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-        {
-            "name" : "url",
-          "type" : ["string"],
-          "label": "URL"
-        },
-        {
-            "name" : "cont_key", 
-          "type": ["number"],
-          "label": "Continue Key", 
-          "default" : null
-        },
-        {
-            "name" : "cont_btn", 
-          "type": ["string"],
-          "label": "Continue Button", 
-          "default" : "null"
-
-        },
-        {
-            "name" : "check_fn", 
-          "type": ["function"],
-          "label": "Sort Area Height", 
-          "default": "function(){ return true; }"
-
-        },
-        {
-            "name" : "force_refresh", 
-          "type": ["boolean"],
-          "label": "Sort Area Width", 
-          "default": false
-        }
-      ]
+      {
+        "name" : "url",
+        "type" : ["string"],
+        "label": "URL"
+      },
+      {
+        "name" : "cont_key", 
+        "type": ["number"],
+        "label": "Continue Key", 
+        "default" : null
+      },
+      {
+        "name" : "cont_btn", 
+        "type": ["string"],
+        "label": "Continue Button", 
+        "default" : "null"
+      },
+      {
+        "name" : "check_fn", 
+        "type": ["function"],
+        "label": "Sort Area Height", 
+        "default": "function(){ return true; }"
+      },
+      {
+        "name" : "force_refresh", 
+        "type": ["boolean"],
+        "label": "Sort Area Width", 
+        "default": false
+      }
+    ]
   };
 
   plugin.trial = function(display_element, trial) {

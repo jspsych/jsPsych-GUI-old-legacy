@@ -10,7 +10,10 @@ jsPsych.plugins.animation = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name": "animation",
+    "info" : {
+      "name": "animation",
+      "description" : "This is a jspsych plugin file for animation."
+    },
     "parameters" : [
       {
         "name" : "stimuli",

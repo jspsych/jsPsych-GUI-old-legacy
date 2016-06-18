@@ -13,77 +13,63 @@ jsPsych.plugins['same-different'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "same-different",
+    "info" : {
+      "name" : "same-different",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
         {
-           "name" : "stimuli",
-           "type" : ["array"],
-           "label": "stimuli"
-          },
-        
+         "name" : "stimuli",
+         "type" : ["array"],
+         "label": "stimuli"
+        },
         {
          "name" : "is_html", 
-           "type": ["boolean"],
-           "label": "is_html",  
-           "default": "false"
-
-          },
-        
+         "type": ["boolean"],
+         "label": "is_html",  
+         "default": "false"
+        },
         {
          "name"  : "answer", 
-           "type": ["string"],
-           "label": "answer"
-
-          },
-        
+         "type": ["string"],
+         "label": "answer"
+        },
         {
          "name"  :"same_key", 
-           "type": ["number","string"],
-           "label": "same_key", 
-           "default": "Q"
-
-          },
-        
+         "type": ["number","string"],
+         "label": "same_key", 
+         "default": "Q"
+        },
         {
          "name" : "different_key", 
-           "type": ["number","string"],
-           "label": "different_key", 
-           "default": "P"
-
-          },
-        
-          {
-           "name"  :"timing_first_stim", 
-           "type": ["numeric"],
-           "label": "timing_first_stim", 
-           "default": "1000"
-
-          },
-        
+         "type": ["number","string"],
+         "label": "different_key", 
+         "default": "P"
+        },
+        {
+         "name"  :"timing_first_stim", 
+         "type": ["numeric"],
+         "label": "timing_first_stim", 
+         "default": "1000"
+        },
         {
          "name"  :"timing_gap", 
-           "type": ["number"],
-           "label": "timing_gap", 
-           "default": "500"
-
-          },
-        
-          {
-           "name"  : "timing_second_stim", 
-           "type": ["numeric"],
-           "label": "timing_second_stim", 
-           "default": "1000"
-
-          },
-        
+         "type": ["number"],
+         "label": "timing_gap", 
+         "default": "500"
+        },
+        {
+         "name"  : "timing_second_stim", 
+         "type": ["numeric"],
+         "label": "timing_second_stim", 
+         "default": "1000"
+        },
         {
          "name"  : "prompt", 
-           "type": ["string"],
-           "label": "prompt", 
-           "default": "\"\""
-
-          }
-        
+         "type": ["string"],
+         "label": "prompt", 
+         "default": "\"\""
+        }
     ]
   };
 

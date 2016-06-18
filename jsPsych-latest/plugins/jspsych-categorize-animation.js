@@ -11,81 +11,75 @@ jsPsych.plugins["categorize-animation"] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "categorize-animation",
+    "info" : {
+      "name" : "categorize-animation",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-        {
-          "name" : "stimuli",
-          "type" : ["array"],
-          "label": "Stimuli"
-        },
-        {
-            "name" : "key_answer", 
-          "type": ["number"],
-          "label": "Key Answer"
-        },
-        {
-            "name" : "choices", 
-          "type": ["array"],
-          "label": "Choices"
-
-        },
-        {
-            "name" : "text_answer", 
-          "type": ["string"],
-          "label": "Text Answer", 
-          "default": " "
-
-        },
-        {
-            "name" : "correct_text", 
-          "type": ["string"],
-          "label": "Correct Text", 
-          "default": "Correct."
-
-        },
-        {
-            "name" : "incorrect_text", 
-          "type": ["string"],
-          "label": "Incorrect Text", 
-          "default": "Wrong."
-
-        },
-        {
-            "name" : "frame_time", 
-          "type": ["boolean"],
-          "label": "Frame Time", 
-          "default": 250
-
-        },
-         {
-            "name" : "sequence_reps", 
-          "type": ["number"],
-          "label": "Force Correct Button Press", 
-          "default": 1
-
-        },
-        {
-            "name" : "allow_response_before_complete", 
-          "type": ["boolean"],
-          "label": "Allow Response Before Complete", 
-          "default": false
-
-        },
-        {
-            "name" : "prompt", 
-          "type": ["string"],
-          "label": "Prompt", 
-          "default": " "
-
-        },
-        {
-            "name" : "timing_feedback_duration", 
-          "type": ["number"],
-          "label": "Timing Feedback Duration", 
-          "default": 2000
-
-        }
-      ]
+      {
+        "name" : "stimuli",
+        "type" : ["array"],
+        "label": "Stimuli"
+      },
+      {
+        "name" : "key_answer", 
+        "type": ["number"],
+        "label": "Key Answer"
+      },
+      {
+        "name" : "choices", 
+        "type": ["array"],
+        "label": "Choices"
+      },
+      {
+        "name" : "text_answer", 
+        "type": ["string"],
+        "label": "Text Answer", 
+        "default": " "
+      },
+      {
+        "name" : "correct_text", 
+        "type": ["string"],
+        "label": "Correct Text", 
+        "default": "Correct."
+      },
+      {
+        "name" : "incorrect_text", 
+        "type": ["string"],
+        "label": "Incorrect Text", 
+        "default": "Wrong."
+      },
+      {
+        "name" : "frame_time", 
+        "type": ["boolean"],
+        "label": "Frame Time", 
+        "default": 250
+      },
+      {
+        "name" : "sequence_reps", 
+        "type": ["number"],
+        "label": "Force Correct Button Press", 
+        "default": 1
+      },
+      {
+        "name" : "allow_response_before_complete", 
+        "type": ["boolean"],
+        "label": "Allow Response Before Complete", 
+        "default": false
+      },
+      {
+        "name" : "prompt", 
+        "type": ["string"],
+        "label": "Prompt", 
+        "default": " "
+      },
+      {
+        "name" : "timing_feedback_duration", 
+        "type": ["number"],
+        "label": "Timing Feedback Duration", 
+        "default": 2000
+      }
+    ]
   };
 
   jsPsych.pluginAPI.registerPreload('categorize-animation', 'stimuli', 'image');

@@ -12,20 +12,21 @@ jsPsych.plugins['call-function'] = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name" : "call-function",
+    "info" : {
+      "name" : "call-function",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
       {
-          "name" : "func",
+        "name" : "func",
         "type" : ["function"],
         "label": "Function"
-
       },
       {
-          "name" : "timing_post_trial", 
+        "name" : "timing_post_trial", 
         "type": ["number"],
         "label": "Timing Post Trial",
         "default": 0
-
       }
     ]
   };

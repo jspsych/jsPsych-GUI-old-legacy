@@ -14,87 +14,70 @@ jsPsych.plugins.similarity = (function() {
   var plugin = {};
 
   plugin.parameters = {
-    "name"  : "similarity",
+    "info" : {
+      "name"  : "similarity",
+      "description" : "This is a jspsych plugin file."
+    },
     "parameters" : [
-    
-        {
-         "name" : "stimuli",
-           "type" : ["array"],
-           "label": "stimuli"
-          },
-        
-        {
-         "name" : "is_html", 
-           "type": ["boolean"],
-           "label": "is_html", 
-           "default": "false"
-
-          },
-        
-        {
-         "name" : "labels", 
-           "type": ["array"],
-           "label": "labels", 
-           "default": ["Not at all similar", "Identical"]
-
-          },
-        
-        {
-         "name" : "intervals", 
-           "type": ["numeric"],
-           "label": "intervals", 
-           "default": "100"
-
-          },
-        
-        {
-         "name" : "show_ticks", 
-           "type": ["boolean"],
-           "label": "show_ticks", 
-           "default": "false"
-
-          },
-        
-        {
-         "name"  : "show_response", 
-           "type": ["string"],
-           "label": "show_response", 
-           "default": "\"SECOND_STIMULUS\""
-
-          },
-        
-          {
-           "name"  : "timing_first_stim", 
-           "type": ["numeric"],
-           "label": "timing_first_stim", 
-           "default": "1000"
-
-          },
-        
-          {
-           "name" : "timing_second_stim", 
-           "type": ["numeric"],
-           "label": "timing_second_stim", 
-           "default": "-1"
-
-          },
-        
-          {
-           "name"  : "timing_image_gap", 
-           "type": ["numeric"],
-           "label": "timing_image_gap", 
-           "default": "1000"
-
-          },
-        
-        {
-         "name"  :"prompt", 
-           "type": ["string"],
-           "label": "prompt", 
-           "default": "\"\""
-
-          }
-        
+      {
+        "name" : "stimuli",
+        "type" : ["array"],
+        "label": "stimuli"
+      },
+      {
+        "name" : "is_html", 
+        "type": ["boolean"],
+        "label": "is_html", 
+        "default": "false"
+      },
+      {
+        "name" : "labels", 
+        "type": ["array"],
+        "label": "labels", 
+        "default": ["Not at all similar", "Identical"]
+      },
+      {
+        "name" : "intervals", 
+        "type": ["numeric"],
+        "label": "intervals", 
+        "default": "100"
+      },
+      {
+        "name" : "show_ticks", 
+        "type": ["boolean"],
+        "label": "show_ticks", 
+        "default": "false"
+      },
+      {
+        "name"  : "show_response", 
+        "type": ["string"],
+        "label": "show_response", 
+        "default": "\"SECOND_STIMULUS\""
+      },
+      {
+        "name"  : "timing_first_stim", 
+        "type": ["numeric"],
+        "label": "timing_first_stim", 
+        "default": "1000"
+      },
+      {
+        "name" : "timing_second_stim", 
+        "type": ["numeric"],
+        "label": "timing_second_stim", 
+        "default": "-1"
+      },
+      {
+        "name"  : "timing_image_gap", 
+        "type": ["numeric"],
+        "label": "timing_image_gap", 
+        "default": "1000"
+      },
+      {
+        "name"  :"prompt", 
+        "type": ["string"],
+        "label": "prompt", 
+        "default": "\"\""
+      }
     ]
   };
 
