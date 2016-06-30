@@ -31,6 +31,7 @@ module.exports = {
       TimelineStructure: 'app/components/TimelineStructure.jsx',
       TimelineData: 'app/components/TimelineData.jsx',
       PreviewComponent: 'app/components/PreviewComponent.jsx',
+      PluginParameterForm: 'app/components/PluginParameterForm.jsx',
       configureStore: 'app/store/configureStore.jsx'
     },
     extensions: ['', '.js', '.jsx','.scss']

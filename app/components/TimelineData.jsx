@@ -3,6 +3,7 @@ import Toggle from 'material-ui/Toggle';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import classnames from 'classnames';
+import PluginParameterForm from 'PluginParameterForm';
 var {connect} = require('react-redux');
 // import {toggleStylesBlock,toggleStylesToggle} from 'applicationStyles';
 
@@ -16,7 +17,7 @@ const mapStateToProps = (state) => {
 		var plugin_parameters = state.pluginDetails;
 		for (let i = 0; i < plugin_parameters.length; i++ ) {
 			var plugin = plugin_parameters[i];
-			items.push(<MenuItem value={i} key={i} primaryText={plugin.info.name} />);
+			items.push(<MenuItem value={plugin.info.name} key={i} primaryText={plugin.info.name} />);
 		}
 		return {
 			state
@@ -28,23 +29,46 @@ const mapStateToProps = (state) => {
 	}
 };
 
+const alignCenter = {
+	textAlign: "center"
+};
+
+const toggleStylesBlock = {
+   maxWidth: 400
+};
+
+const toggleStylesToggle = {
+  marginBottom: 16
+};
+
 var TimelineData = React.createClass({
 	getInitialState: function() {
 		return {
-			value: null
+			value: null,
+			currentTrialType: []
 		}
 	},
 	handleChange : function(event, index, value) {
-		this.setState({value});
+		console.log(value);
+		var {pluginDetails} = this.props.state;
+		var currentTrialType = [];
+		var value_plugin_parameters = [];
+		for(var i=0; i<pluginDetails.length; i++) {
+			if(pluginDetails[i].info.name == value) {
+				currentTrialType = pluginDetails[i].parameters;
+				break;
+			}
+		}
+		this.setState({value:value, currentTrialType:currentTrialType});
 	},
 	render: function() {
 		return (
-			<div>
-				<div className="toggleClassBlock" >
+			<div style={alignCenter}>
+				<div style={toggleStylesBlock}>
 					<Toggle
 				      label="Timeline / Trial"
 				      defaultToggled={true}
-				      className="toggleClassToggle"
+				      style={toggleStylesToggle}
 				    />
 				</div>
 				<div>
@@ -57,6 +81,8 @@ var TimelineData = React.createClass({
 			          {items}
 			        </SelectField>
 				</div>
+				<br/>
+				<PluginParameterForm currentTrialType={this.state.currentTrialType}/>
 			</div>
 		);
 	}

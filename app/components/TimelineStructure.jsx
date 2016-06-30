@@ -93,10 +93,7 @@ var TimelineStructure = React.createClass({
     console.log(event_data.target);
     console.log(event_data.target.innerHTML);
     var trial_name = event_data.target.innerHTML;
-    if(trial_name != this.state.trial_name) {
-      this.setState({open: true,trial_name: trial_name});  
-      // this.setState({open: !this.state.open});
-    }
+    this.setState({open: true,trial_name: trial_name});
     var {dispatch} = this.props;
     // dispatch(setClickedTimelineItem(name));
   },
