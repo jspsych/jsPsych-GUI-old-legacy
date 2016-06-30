@@ -2,6 +2,7 @@ var React = require('react');
 import MainNavBar from 'MainNavBar';
 import TimelineStructure from 'TimelineStructure';
 import TimelineData from 'TimelineData';
+import PreviewComponent from 'PreviewComponent';
 const {Grid, Cell} = require('react-flexr');
 var {setPluginDetails, setTimelineStructure} = require('actions');
 var {connect} = require('react-redux');
@@ -53,9 +54,20 @@ var Main = React.createClass({
 		return (
 			<div>
 				<MainNavBar/>
-				<div style={mainStyle}>		
-					<TimelineStructure/>
-				</div>
+				<table>
+					<tbody>
+					  <tr>
+						<td>
+							<div style={mainStyle}>		
+								<TimelineStructure/>
+							</div>
+						</td>
+						<td>
+							<PreviewComponent/>
+						</td>
+					  </tr>
+					</tbody>
+				</table>
 			</div>
 		);
 	}

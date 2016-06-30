@@ -73,6 +73,13 @@ const paperStyle = {
   height: window.innerHeight*0.9
 };
 
+const styleFAB = {
+  marginRight: 20,
+  position: 'absolute',
+  bottom: window.innerHeight*0.1,
+  left: window.innerWidth*0.01
+}
+
 var TimelineStructure = React.createClass({
   getInitialState: function() {
     return {
@@ -87,8 +94,8 @@ var TimelineStructure = React.createClass({
     console.log(event_data.target.innerHTML);
     var trial_name = event_data.target.innerHTML;
     if(trial_name != this.state.trial_name) {
-      this.setState({open: !this.state.open, trial_name: trial_name});  
-      this.setState({open: !this.state.open});
+      this.setState({open: true,trial_name: trial_name});  
+      // this.setState({open: !this.state.open});
     }
     var {dispatch} = this.props;
     // dispatch(setClickedTimelineItem(name));
@@ -118,7 +125,7 @@ var TimelineStructure = React.createClass({
             })   
           }
         </SelectableList>
-        <FloatingActionButton className="styleFAB">
+        <FloatingActionButton style={styleFAB}>
           <ContentAdd />
         </FloatingActionButton>
       </Paper>

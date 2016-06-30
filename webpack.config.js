@@ -30,6 +30,7 @@ module.exports = {
       MainNavBar: 'app/components/MainNavBar.jsx',
       TimelineStructure: 'app/components/TimelineStructure.jsx',
       TimelineData: 'app/components/TimelineData.jsx',
+      PreviewComponent: 'app/components/PreviewComponent.jsx',
       configureStore: 'app/store/configureStore.jsx'
     },
     extensions: ['', '.js', '.jsx','.scss']
