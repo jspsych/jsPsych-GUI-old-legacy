@@ -15,7 +15,7 @@ store.subscribe(() => {
 });
 
 // App css
-require('style!css!sass!applicationStyles');
+// require('style!css!sass!applicationStyles');
 
 const setMuiTheme = getMuiTheme(lightBaseTheme);
 

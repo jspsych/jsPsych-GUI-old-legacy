@@ -4,6 +4,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import classnames from 'classnames';
 var {connect} = require('react-redux');
+// import {toggleStylesBlock,toggleStylesToggle} from 'applicationStyles';
 
 let toggleClassBlock = classnames('toggle-styles-block');
 let toggleClassToggle = classnames('toggle-styles-toggle');
@@ -21,9 +22,11 @@ const mapStateToProps = (state) => {
 			state
 		}
 	} else {
-		return state
+		return {
+			state
+		}
 	}
-}
+};
 
 var TimelineData = React.createClass({
 	getInitialState: function() {
@@ -37,11 +40,11 @@ var TimelineData = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<div className="toggle-styles-block">
+				<div className="toggleClassBlock" >
 					<Toggle
 				      label="Timeline / Trial"
 				      defaultToggled={true}
-				      className="toggle-styles-toggle"
+				      className="toggleClassToggle"
 				    />
 				</div>
 				<div>

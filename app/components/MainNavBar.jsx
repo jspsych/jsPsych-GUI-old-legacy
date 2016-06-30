@@ -21,7 +21,7 @@ const MainNavBar = () => (
     iconElementRight={
          <FlatButton
            key={1}
-           label="Save"/>
+           label="Generate"/>
      }
   />
 );

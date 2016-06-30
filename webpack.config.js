@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: [
@@ -31,7 +32,7 @@ module.exports = {
       TimelineData: 'app/components/TimelineData.jsx',
       configureStore: 'app/store/configureStore.jsx'
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx','.scss']
   },
   module: {
     loaders: [
@@ -47,8 +48,15 @@ module.exports = {
         test: /\.css$/,
         loader: 'style!css?modules',
         include: /flexboxgrid/
+      },
+      { 
+        test: /\.css$/, 
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader") 
       }
     ]
   },
+  plugins: [
+      new ExtractTextPlugin("public/reqStyles.css", { allChunks: true })
+  ],
   devtool: 'cheap-module-eval-source-map'
 };

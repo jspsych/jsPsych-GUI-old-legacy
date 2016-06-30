@@ -1,9 +1,11 @@
 var redux = require('redux');
-var {pluginDetailsReducer} = require('reducers');
+var {pluginDetailsReducer,handleTimelineStructureReducer, setTimelineItem} = require('reducers');
 
 export var configure = (initialState = {}) => {
   var reducer = redux.combineReducers({
-    pluginDetails: pluginDetailsReducer
+    pluginDetails: pluginDetailsReducer,
+    timelineStructure: handleTimelineStructureReducer,
+    selectedTimelineItem: setTimelineItem
   });
 
   var store = redux.createStore(reducer, initialState, redux.compose(
