@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
 		var plugin_parameters = state.pluginDetails;
 		for (let i = 0; i < plugin_parameters.length; i++ ) {
 			var plugin = plugin_parameters[i];
-			items.push(<MenuItem value={plugin.info.name} key={i} primaryText={plugin.info.name} />);
+			items.push(<MenuItem value={plugin.name} key={i} primaryText={plugin.name} />);
 		}
 		return {
 			state
@@ -54,7 +54,7 @@ var TimelineData = React.createClass({
 		var currentTrialType = [];
 		var value_plugin_parameters = [];
 		for(var i=0; i<pluginDetails.length; i++) {
-			if(pluginDetails[i].info.name == value) {
+			if(pluginDetails[i].name == value) {
 				currentTrialType = pluginDetails[i].parameters;
 				break;
 			}

@@ -7,8 +7,6 @@ const {Grid, Cell} = require('react-flexr');
 var {setPluginDetails, setTimelineStructure} = require('actions');
 var {connect} = require('react-redux');
 var actions = require('actions');
-import 'react-flexr/styles.css';
-
 
 const mainStyle = {
 	width: window.innerWidth/4
@@ -21,7 +19,7 @@ var Main = React.createClass({
 	      	console.log("Received Plugin Parameters...",all_plugin_parameters);
 	      	dispatch(actions.setPluginDetails(all_plugin_parameters));
 	    });
-
+	    
 	    //Set Initial Timeline Structure
 	    var timelineStructure = [
 	    	{

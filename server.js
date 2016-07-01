@@ -1,5 +1,5 @@
 var express = require('express');
-var jsPsych_Path = __dirname + '/jspsych-latest/jspsych.js';
+var jsPsych_Path = __dirname + '/public/jspsych-latest/jspsych.js';
 var fs = require('fs');
 // Create our app
 var app = express();
@@ -16,7 +16,8 @@ app.use(function (req, res, next){
 app.use(express.static('public'));
 
 var all_plugin_parameters = [];
-var all_plugin_parameters_index = 0;			
+var all_plugin_parameters_index = 0;	
+
 addPluginParameters = (obj) => {
 	all_plugin_parameters[all_plugin_parameters_index] = obj;
 	all_plugin_parameters_index += 1;
@@ -27,7 +28,7 @@ app.get('/plugin_data', function(req,res) {
 	var jspsych_file = fs.readFileSync(jsPsych_Path).toString();
 	eval(jspsych_file);
 
-	var plugins_path = __dirname + "/jspsych-latest/plugins/";
+	var plugins_path = __dirname + "/public/jspsych-latest/plugins/";
 
 	all_plugin_parameters = [];
   	all_plugin_parameters_index = 0;
@@ -45,12 +46,11 @@ app.get('/plugin_data', function(req,res) {
 	        	var file_name_end = items[i].indexOf(".");
 	        	var file_name = items[i].substring(file_name_start,file_name_end);
 				console.log(file_name);
-				if(file_name == 'single-audio')
-					continue;
 				var file_path = plugins_path + items[i];
 				var file_data = fs.readFileSync(file_path).toString();
 				eval(file_data);
-				addPluginParameters(jsPsych.plugins[file_name].parameters);
+				var temp_plugin_obj = jsPsych.plugins[file_name];
+				addPluginParameters(temp_plugin_obj.info);
 			}
 		}
 		res.send(all_plugin_parameters);
